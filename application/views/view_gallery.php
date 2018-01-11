@@ -46,19 +46,19 @@
 
 
           <div class="row" id="portfolio-wrapper">
+            <div id="galley" class="row">
+              <?php foreach ($gallery->result() as $galer): ?>
 
-            <?php foreach ($gallery->result() as $galer): ?>
-
-              <div class="col-lg-3 col-md-6 portfolio-item filter-app">
-                <img id="galley" src="<?php echo base_url(); ?>assets/uploads/<?=$galer->url;?>" alt="" width="100%" height="100%">
-                <div class="details">
-                  <h4><?=$galer->title;?></h4>
-                  <span><?=$galer->deskripsi;?></span>
+                <div id="galley" class="col-lg-3 col-md-6 portfolio-item filter-app">
+                  <img  src="<?php echo base_url(); ?>assets/uploads/<?=$galer->url;?>" alt="" width="100%" height="100%">
+                  <div class="details">
+                    <h4><?=$galer->title;?></h4>
+                    <span><?=$galer->deskripsi;?></span>
+                  </div>
                 </div>
-              </div>
-            <?php endforeach ?>
+              <?php endforeach ?>
+            </div>
           </div>
-
         </div>
       </section><!-- #portfolio -->
 
