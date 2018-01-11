@@ -59,7 +59,7 @@
               <li><a href="#">Drop Down 5</a></li>
             </ul>
           </li> -->
-          <li><a href="#portfolio">Gallery</a></li>
+          <li><a href="<?php echo base_url('home/gallery'); ?>#portfolio">Gallery</a></li>
           <li><a href="<?php echo base_url(); ?>#contact">Contact Us</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
