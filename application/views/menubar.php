@@ -29,7 +29,7 @@
           </li>
           <li class="menu-has-children"><a href="">Organisasi</a>
             <ul>
-              <li><a href="<?php echo base_url('home/kegiatan'); ?>">Kegiatan</a></li>
+              <li><a href="<?php echo base_url('home/gallery_kegiatan'); ?>">Kegiatan</a></li>
             </ul>
           </li>
            <li class="menu-has-children"><a href="">PMB</a>
@@ -59,7 +59,7 @@
               <li><a href="#">Drop Down 5</a></li>
             </ul>
           </li> -->
-          <li><a href="<?php echo base_url('home/gallery'); ?>#portfolio">Gallery</a></li>
+          <li><a href="<?php echo base_url('home/gallery_kampus'); ?>#portfolio">Gallery</a></li>
           <li><a href="<?php echo base_url(); ?>#contact">Contact Us</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->

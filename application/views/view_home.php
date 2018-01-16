@@ -8,57 +8,23 @@
  <section id="hero">
   <div class="hero-container">
     <h1>Selamat Datang</h1>
-    <h2>Di Website Teknik Industri Politeknik Swadharma</h2>
+    <?php foreach ($home as $row): ?>
+      <h2><?php echo $row->judul; ?></h2>
+    <?php endforeach ?>
+
   </div>
 </section><!-- #hero -->
 
 <main id="main">
 
-  
 
-<?php
-$this->load->view('view_sejarah');
-$this->load->view('view_visi_misi');
-$this->load->view('view_fasilitas');
-$this->load->view('view_struktur_organisasi');
-?>
 
-    <!--==========================
-      Facts Section
-      ============================-->
-      <section id="facts">
-        <div class="container wow fadeIn">
-          <div class="section-header">
-            <h3 class="section-title">Facts</h3>
-            <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-          </div>
-          <div class="row counters">
-
-            <div class="col-lg-3 col-6 text-center">
-              <span data-toggle="counter-up">232</span>
-              <p>Clients</p>
-            </div>
-
-            <div class="col-lg-3 col-6 text-center">
-              <span data-toggle="counter-up">521</span>
-              <p>Projects</p>
-            </div>
-
-            <div class="col-lg-3 col-6 text-center">
-              <span data-toggle="counter-up">1,463</span>
-              <p>Hours Of Support</p>
-            </div>
-
-            <div class="col-lg-3 col-6 text-center">
-              <span data-toggle="counter-up">15</span>
-              <p>Hard Workers</p>
-            </div>
-
-          </div>
-
-        </div>
-      </section><!-- #facts -->
-
+  <?php
+  $this->load->view('view_sejarah');
+  $this->load->view('view_visi_misi');
+  // $this->load->view('view_fasilitas');
+  $this->load->view('view_struktur_organisasi');
+  ?>
 
 
 
@@ -68,8 +34,7 @@ $this->load->view('view_struktur_organisasi');
       <section id="contact">
         <div class="container wow fadeInUp">
           <div class="section-header">
-            <h3 class="section-title">Contact</h3>
-            <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+            <h3 class="section-title">Kontak <i class="icofont icofont-cur-taka-minus"></i></h3>
           </div>
         </div>
 

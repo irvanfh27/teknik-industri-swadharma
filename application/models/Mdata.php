@@ -3,9 +3,35 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Mdata extends CI_Model {
 
-	function get_gallery(){
-	  $query = $this->db->query('SELECT * FROM gambar');
-    return $query;
+	function get_gallery_kegiatan(){
+		$query = $this->db->query('SELECT * FROM gallery_kegiatan');
+		return $query;
+	}
+
+	function get_gallery_kampus(){
+		$query = $this->db->query('SELECT * FROM gallery_kampus');
+		return $query;
+	}
+
+	function get_home_setting(){
+		$this->db->select('*');
+		$this->db->from('home_setting');
+		$query=$this->db->get();
+		return $query->result();
+	}
+
+	function get_sejarah_ti(){
+		$this->db->select('*');
+		$this->db->from('teknik_industri');
+		$query=$this->db->get();
+		return $query->result();
+	}
+
+	function get_struktur_organisasi(){
+		$this->db->select('*');
+		$this->db->from('struktur_organisasi');
+		$query=$this->db->get();
+		return $query->result();
 	}
 
 }

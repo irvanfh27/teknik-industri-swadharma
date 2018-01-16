@@ -25,7 +25,7 @@
       <section id="portfolio">
         <div class="container wow fadeInUp">
           <div class="section-header">
-            <h3 class="section-title">Kegiatan Organisasi</h3>
+            <h3 class="section-title">Gallery Kampus</h3>
             <p><br></p>
             <!--           <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p> -->
           </div>
@@ -50,7 +50,7 @@
               <?php foreach ($gallery->result() as $galer): ?>
 
                 <div id="galley" class="col-lg-3 col-md-6 portfolio-item filter-app">
-                  <img  src="<?php echo base_url(); ?>assets/uploads/<?=$galer->url;?>" alt="" width="100%" height="100%">
+                  <img  src="<?php echo base_url(); ?>admin/assets/uploads/files/<?=$galer->file_url;?>" alt="" width="100%" height="100%">
                   <div class="details">
                     <h4><?=$galer->title;?></h4>
                     <span><?=$galer->deskripsi;?></span>
