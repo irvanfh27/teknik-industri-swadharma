@@ -17,7 +17,6 @@
             <ul>
               <li><a href="<?php echo base_url(); ?>home#sejarah">Sejarah</a></li>
               <li><a href="<?php echo base_url(); ?>home#visi-misi">Visi & Misi</a></li>
-              <li><a href="<?php echo base_url(); ?>home#services">Fasilitas</a></li>
               <li><a href="<?php echo base_url(); ?>home#team">Struktur Organisasi</a></li>
             </ul>
           </li>

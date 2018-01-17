@@ -11,7 +11,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>Politeknik Swadharma</strong>. All Rights Reserved
+        &copy; Copyright <strong>Teknik Industri 2016</strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!--

@@ -10,7 +10,7 @@
  <?php $this->load->view('menubar'); ?>
  <section id="hero">
   <div class="hero-container">
-    <h1>Politeknik Swadharma Teknik Industri</h1>
+    <h1>Selamat Datang</h1>
   </div>
 </section><!-- #hero -->
 

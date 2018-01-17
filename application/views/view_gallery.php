@@ -10,9 +10,7 @@
  <?php $this->load->view('menubar'); ?>
  <section id="hero">
   <div class="hero-container">
-    <h1>Politeknik Swadharma Teknik Industri</h1>
-    <h2>We are team of talanted designers making websites with Bootstrap</h2>
-    <a href="#sejarah" class="btn-get-started">Get Started</a>
+    <h1>Selamat Datang</h1>
   </div>
 </section><!-- #hero -->
 
@@ -52,7 +50,7 @@
                 <div id="galley" class="col-lg-3 col-md-6 portfolio-item filter-app">
                   <img  src="<?php echo base_url(); ?>admin/assets/uploads/files/<?=$galer->file_url;?>" alt="" width="100%" height="100%">
                   <div class="details">
-                    <h4><?=$galer->title;?></h4>
+                    <h4><?=$galer->judul;?></h4>
                     <span><?=$galer->deskripsi;?></span>
                   </div>
                 </div>
@@ -67,7 +65,7 @@
     <?php $this->load->view('footer'); ?>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.min.js"></script>
-    <script src="<?php echo base_url(); ?>/assets/dist/viewer.js"></script>
+    <script src="<?php echo base_url(); ?>assets/dist/viewer.js"></script>
     <script>
       window.addEventListener('DOMContentLoaded', function () {
         var galley = document.getElementById('galley');
