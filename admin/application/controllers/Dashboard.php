@@ -73,7 +73,7 @@
 
         public function user_after_delete($primary_key)
         {
-      
+
             return $this->db->insert('user_logs',array('id_was_deleted' => $primary_key,'role'=> $this->session->userdata('role'),'email'=> $this->session->userdata('email'), 'action'=>'delete', 'updated' => date('Y-m-d H:i:s')));
 
 
@@ -146,6 +146,29 @@
             $this->load->view('frame/title_table', $data);
             $this->load->view('admin/template_crud',(array)$output);
         }
+
+
+        public function message()
+        {
+            $crud = new grocery_CRUD();
+
+            $crud->set_table('contactus');
+            $crud->set_subject('Message');
+
+            $crud->unset_print();
+            $crud->unset_export();
+            $crud->unset_add();
+
+            $output = $crud->render();
+            $data['title'] = "Message";
+
+
+            $this->load->view('frame/header_view');
+            $this->load->view('frame/sidebar_nav_view');
+            $this->load->view('frame/title_table', $data);
+            $this->load->view('admin/template_crud',(array)$output);
+        }
+
 
     }
 

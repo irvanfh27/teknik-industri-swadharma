@@ -34,6 +34,10 @@ class Mdata extends CI_Model {
 		return $query->result();
 	}
 
+	function input_data($data,$table){
+		$this->db->insert($table,$data);
+	}
+
 }
 
 /* End of file Mdata.php */

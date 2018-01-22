@@ -6,6 +6,8 @@ class Home extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('Mdata');
+		$this->load->helper(array('form', 'url'));
+		$this->load->library(array('form_validation','session'));
 	}
 
 	public function index()
@@ -20,15 +22,20 @@ class Home extends CI_Controller {
 	}
 	public function sejarah_ti()
 	{
-		$data['title'] = "Sejarah Teknik Industri";
-		$data['sejarah'] = $this->Mdata->get_sejarah_ti();
+		$data = array(
+			'title' => "Sejarah Teknik Industri",
+			'sejarah' => $this->Mdata->get_sejarah_ti()
+		);
 
 		$this->load->view('view_sejarah_ti', $data);
 	}
 	public function tentang_ti()
 	{
-		$data['title'] = "Tentang Teknik Industri";
-		$data['sejarah'] = $this->Mdata->get_sejarah_ti();
+		$data = array(
+			'title' => "Tentang Teknik Industri",
+			'sejarah' => $this->Mdata->get_sejarah_ti()
+		);
+
 
 		$this->load->view('view_tentang_ti', $data);
 	}
@@ -41,11 +48,30 @@ class Home extends CI_Controller {
 	}
 	public function gallery_kampus()
 	{
-		$this->load->model('Mdata');
 		$data['gallery'] = $this->Mdata->get_gallery_kampus();
 		$data['title'] = "Gallery";
 
 		$this->load->view('view_gallery', $data);
+	}
+
+	function sendmessage(){
+		$this->load->library('session');
+		$nama = $this->input->post('nama');
+		$email = $this->input->post('email');
+		$subject = $this->input->post('subject');
+		$pesan = $this->input->post('pesan');
+
+		$data = array(
+			'nama' => $nama,
+			'email' => $email,
+			'subject' => $subject,
+			'pesan' => $pesan
+		);
+
+		$this->Mdata->input_data($data,'contactus');
+
+		$this->session->set_flashdata('item','Your message has been sent. Thank you!'); 
+		redirect('home/#contact');
 	}
 
 

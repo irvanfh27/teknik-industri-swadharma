@@ -29,6 +29,10 @@
                             </ul>
                         </li>
                         <li>
+                            <a href="<?php echo base_url('dashboard/message'); ?>"><i class="fa fa-user fa-fw"></i>Message</a>
+
+                        </li>
+                        <li>
                             <a href="#"><i class="fa fa-user fa-fw"></i> Other Menu Sample<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li> <a href="#">&raquo; Other Sub Menu 1</a> </li>
