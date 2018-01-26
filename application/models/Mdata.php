@@ -8,10 +8,29 @@ class Mdata extends CI_Model {
 		return $query;
 	}
 
+	
 	function get_gallery_kampus(){
-		$query = $this->db->query('SELECT * FROM gallery_kampus');
+		// $query = $this->db->query('SELECT * FROM gallery_kampus');
+		return $this->db->get('gallery_kampus');
+	}
+
+	function get_alumni(){
+		// $query = $this->db->query('SELECT * FROM gallery_kampus');
+		return $this->db->get('alumni');
+	}
+
+	public function get_tahun()		
+	{
+
+		$this->db->distinct();
+
+		$this->db->select('tahun');
+
+		$query = $this->db->get('alumni');
+
 		return $query;
 	}
+
 
 	function get_home_setting(){
 		$this->db->select('*');

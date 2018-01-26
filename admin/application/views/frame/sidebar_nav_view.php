@@ -23,8 +23,8 @@
                                 <li> <a href="<?php echo base_url('dashboard/struktur_organisasi'); ?>">&raquo; Struktur Organisasi</a> </li>
                                 <li> <a href="<?php echo base_url('dashboard/gallery_kegiatan'); ?>">&raquo; Gallery Kegiatan</a> </li>
                                 <li> <a href="<?php echo base_url('dashboard/gallery_kampus'); ?>">&raquo; Gallery Kampus</a> </li>
-
                                 <li> <a href="<?php echo base_url('dashboard/teknik_industri'); ?>">&raquo; Teknik Industri</a> </li>
+                                <li> <a href="<?php echo base_url('dashboard/alumni'); ?>">&raquo; Data Alumni</a> </li>
 
                             </ul>
                         </li>

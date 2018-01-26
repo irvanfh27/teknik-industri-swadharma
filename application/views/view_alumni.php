@@ -31,8 +31,12 @@
 
             <div class="col-lg-12">
               <ul id="portfolio-flters">
-                <li data-filter=".filter-all, .filter-2222" class="filter-active">All</li>
-                           <!-- <li data-filter=".filter-card">Card</li>
+                <li data-filter="<?php foreach ($kategori as $kategory):  echo '.filter-'.$kategory->tahun.', '; endforeach ?> .filter-2222" class="filter-active">All</li>
+                <?php
+                foreach($kategori as $kategory){ ?>
+                <?php echo '<li data-filter=".filter-'.$kategory->tahun.'">'.$kategory->tahun.'</li>' ?>
+                <?php } ?>
+            <!-- <li data-filter=".filter-card">Card</li>
                 <li data-filter=".filter-logo">Logo</li>
                 <li data-filter=".filter-web">Web</li> -->
               </ul>
@@ -46,12 +50,12 @@
             <div id="galley" class="row">
               <?php foreach ($gallery as $galer): ?>
 
-                <div id="galley" class="col-lg-3 col-md-6 portfolio-item filter-all">
+                <div id="galley" class="col-lg-3 col-md-6 portfolio-item filter-<?php echo $galer->tahun; ?>">
                   <img  src="<?php echo base_url(); ?>admin/assets/uploads/files/<?=$galer->file_url;?>" alt="" width="100%" height="100%">
                   <div class="details">
-                    <h4><?=$galer->judul;?></h4>
-                    <span><?=$galer->deskripsi;?></span><br>
-                    <span><?=$galer->tahun;?></span>
+                    <h4><?=$galer->nama;?></h4>
+                    <span><?=$galer->posisi_kerja;?></span>
+                    <span><?=$galer->tempat_kerja;?></span>
                   </div>
                 </div>
               <?php endforeach ?>

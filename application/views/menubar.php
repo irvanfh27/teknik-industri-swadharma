@@ -36,6 +36,11 @@
               <li><a href="http://www.poltek-swadharma.ac.id/index.php?option=com_frontpage&Itemid=1&lang=in" target="_blank">Biaya Kuliah</a></li>
             </ul>
           </li>
+          <li class="menu-has-children"><a href="">Alumni</a>
+            <ul>
+              <li><a href="<?php echo base_url('home/alumni'); ?>">Data Alumni</a></li>
+            </ul>
+          </li>
 <!-- 
           <li><a href="#about">About Us</a></li>
           <li><a href="#services">Services</a></li>

@@ -131,6 +131,7 @@
 
             $crud->set_table('teknik_industri');
             $crud->display_as('sejarah_ti','Sejarah Teknik Industri')
+
             ->display_as('keunggulan_ti','Keunggulan D3 Teknik Industri');
             $crud->set_subject('Keunggulan Dan Sejarah Teknik Industri');
 
@@ -146,6 +147,28 @@
             $this->load->view('frame/title_table', $data);
             $this->load->view('admin/template_crud',(array)$output);
         }
+
+         public function alumni()
+        {
+            $crud = new grocery_CRUD();
+
+            $crud->set_table('alumni');
+            $crud->display_as('nama','Nama Alumni')->display_as('file_url','Foto Alumni')->display_as('tahun','Tahun Lulus');
+            $crud->set_subject('Alumni');
+            $crud->set_field_upload('file_url','assets/uploads/files');
+            $crud->unset_print();
+            $crud->unset_export();
+
+            $output = $crud->render();
+            $data['title'] = "Keunggulan Dan Sejarah Teknik Industri";
+
+
+            $this->load->view('frame/header_view');
+            $this->load->view('frame/sidebar_nav_view');
+            $this->load->view('frame/title_table', $data);
+            $this->load->view('admin/template_crud',(array)$output);
+        }
+
 
 
         public function message()

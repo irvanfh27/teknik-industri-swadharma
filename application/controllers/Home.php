@@ -48,10 +48,20 @@ class Home extends CI_Controller {
 	}
 	public function gallery_kampus()
 	{
-		$data['gallery'] = $this->Mdata->get_gallery_kampus();
-		$data['title'] = "Gallery";
-
+		$data = array(
+			'gallery' => $this->Mdata->get_gallery_kampus()->result(),
+			'title' => "Gallery" );
+	
 		$this->load->view('view_gallery', $data);
+	}
+	public function alumni()
+	{
+		$data = array(
+			'gallery' => $this->Mdata->get_alumni()->result(),
+			'title' => "Alumni TI Swadharma",
+			'kategori' => $this->Mdata->get_tahun()->result() );
+	
+		$this->load->view('view_alumni', $data);
 	}
 
 	function sendmessage(){
