@@ -23,7 +23,7 @@
       <section id="portfolio">
         <div class="container wow fadeInUp">
           <div class="section-header">
-            <h3 class="section-title">Gallery Kampus</h3>
+            <h3 class="section-title">Data Alumni</h3>
             <p><br></p>
             <!--           <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p> -->
           </div>

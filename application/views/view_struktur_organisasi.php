@@ -5,7 +5,11 @@
         <div class="container wow fadeInUp">
           <div class="section-header">
             <h3 class="section-title">Struktur Organisasi</h3>
-            <p class="section-description">Mencetak tenaga kerja profesional dengan kemampuan merancang tata letak pabrik, mengoptimalisasi aktivitas produksi (perancangan sistem kerja, PPC, quality control, K3, logistik),dan merawat fasilitas produksi.</p>
+           <?php foreach ($home as $row): ?>
+             
+            <p class="section-description"><?php echo $row->deskripsi_so; ?></p>
+           <?php endforeach ?>
+
           </div>
           <div class="row" >
             <?php foreach ($struktur as $row): ?>
