@@ -5,9 +5,10 @@
     <div class="container">
 
       <div id="logo" class="pull-left">
-        <a href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>regna/img/teknik.jpeg" alt="" title="" /></img></a>
+       <div style="color:White;"><img src="<?php echo base_url(); ?>regna/img/teknik.jpeg" alt="" title="" /></img>
+          &nbsp; Teknik Industri</div>
         <!-- Uncomment below if you prefer to use a text logo -->
-        <!-- <h1><a href="#hero">Teknik Industri</a></h1> -->
+        <!-- <h5><a href="#hero">Teknik Industri</a></h5> -->
       </div>
 
       <nav id="nav-menu-container">
@@ -29,6 +30,8 @@
           <li class="menu-has-children"><a href="">Organisasi</a>
             <ul>
               <li><a href="<?php echo base_url('home/gallery_kegiatan'); ?>">Kegiatan</a></li>
+              <li><a href="<?php echo base_url('home/programkerja'); ?>">Program Kerja</a></li>
+
             </ul>
           </li>
            <li class="menu-has-children"><a href="">PMB</a>

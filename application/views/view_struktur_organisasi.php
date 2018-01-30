@@ -6,7 +6,6 @@
           <div class="section-header">
             <h3 class="section-title">Struktur Organisasi</h3>
            <?php foreach ($home as $row): ?>
-             
             <p class="section-description"><?php echo $row->deskripsi_so; ?></p>
            <?php endforeach ?>
 

@@ -6,7 +6,7 @@ class Home extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('Mdata');
-		$this->load->helper(array('form', 'url'));
+		$this->load->helper(array('form', 'url','text'));
 		$this->load->library(array('form_validation','session'));
 	}
 
@@ -83,6 +83,30 @@ class Home extends CI_Controller {
 		$this->session->set_flashdata('item','Your message has been sent. Thank you!'); 
 		redirect('home/#contact');
 	}
+
+	public function programkerja()
+	{
+		$data = array('programkerja' => $this->Mdata->get_program_kerja(),
+		'title' => 'Program Kerja' );
+
+		$this->load->view('view_program_kerja', $data);
+	}
+
+
+	public function programkerja_detail($id = NULL)
+	{
+
+		$data['post'] = $this->Mdata->get_program_kerja($id);
+
+		if (empty($data['post'])) {
+			show_404();
+		}
+		$data['judul'] = $data['post']['judul'];
+		$data['title'] = 'Program Kerja';
+		
+		$this->load->view('view_detail_program_kerja', $data);
+	}
+
 
 
 }

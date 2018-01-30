@@ -13,7 +13,8 @@
         </div>
     <?php endif;?>
     <div class="row">
-        <?php echo $output; ?>
+    <div><?php if(isset($output))echo $output; ?></div>
+       
     </div>
     <!-- /.row -->
 </div>

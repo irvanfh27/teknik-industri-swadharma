@@ -22,15 +22,15 @@
 <script src="<?=base_url()?>assets/js/bootstrap-editable.js"></script>
 
 <!-- Custom Theme JavaScript -->
-<?php    
-if(isset($css_files)):    
-    foreach($css_files as $file): ?>
-    <link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
-<?php endforeach; ?>
-<?php foreach($js_files as $file): ?>
-    <script src="<?php echo $file; ?>"></script>
-<?php endforeach;
-endif; ?>
+<?php 
+if(isset($css_files)){
+foreach($css_files as $file): ?>
+	<link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
+<?php endforeach; }?>
+
+<?php if(isset($js_files)){foreach($js_files as $file): ?>
+	<script src="<?php echo $file; ?>"></script>
+<?php endforeach; }?>
 <script src="<?=base_url()?>assets/js/metisMenu.min.js"></script>
 <script src="<?=base_url()?>assets/js/sb-admin-2.js"></script>
 <script src="<?=base_url()?>assets/js/bootstrap.min.js"></script>
