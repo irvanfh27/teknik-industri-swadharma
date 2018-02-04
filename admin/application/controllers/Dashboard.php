@@ -199,9 +199,12 @@
             $crud->set_table('program_kerja');
             $crud->set_subject('Program Kerja');
             $crud->set_field_upload('file','assets/uploads/files');
-            $crud->change_field_type('create_at', 'invisible');
+            $crud->change_field_type('create_at', 'invisible')->change_field_type('slug','invisible');
+            $crud->unset_columns('slug');
             $crud->unset_print();
             $crud->unset_export();
+
+            $crud->callback_before_insert(array($this,'before_insert'));
 
             $output = $crud->render();
             $data['title'] = "Program Kerja";
@@ -213,6 +216,16 @@
             $this->load->view('admin/template_crud',(array)$output);
         }
 
+        function before_insert($post_array, $primary_key = null)
+        {
+            $slug = url_title($post_array['judul']);
+
+            $post_array['slug'] = $slug;
+    
+
+            return $post_array;
+
+        }
 
     }
 

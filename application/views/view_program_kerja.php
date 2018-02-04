@@ -23,10 +23,10 @@
                 <br>
                 <br>
                 <?php foreach ($programkerja as $row): ?>
-                  
+
                   <div class="icon-box wow fadeInUp">
                     <div class="icon"><i class="fa fa-file-text-o"></i></div>
-                    <h4 class="title"><a href="<?php echo base_url('home/programkerja_detail/').$row['id']; ?>"><?php echo $row['judul']; ?></a></h4>
+                    <h4 class="title"><a href="<?php echo base_url('home/programkerja_detail/').$row['slug']; ?>"><?php echo $row['judul']; ?></a></h4>
                     &nbsp;&nbsp;<i class="fa fa-calendar"></i>&nbsp;<small><?php echo $row['create_at']; ?></small>
                     <p class="description">&nbsp;<?php echo word_limiter($row['deskripsi'],20); ?></p>
                   </div>
@@ -37,6 +37,6 @@
             </div>
           </div>
         </section><!-- #about -->
-        
+
       </main>
       <?php $this->load->view('footer'); ?>

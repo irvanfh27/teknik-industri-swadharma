@@ -65,17 +65,17 @@ class Mdata extends CI_Model {
 			return $query->result_array();
 		}
 
-		$query = $this->db->get_where('program_kerja', array('id' => $id));
+		$query = $this->db->get_where('program_kerja', array('slug' => $id));
 
 		return $query->row_array();
 	}
 
-	public function get_detail_program_kerja($id)
-	{
-		$this->db->where('id',$id);
-		$query=$this->db->get('program_kerja');
-		return $query->result();
-	}
+	// public function get_detail_program_kerja($id)
+	// {
+	// 	$this->db->where('id',$id);
+	// 	$query=$this->db->get('program_kerja');
+	// 	return $query->result();
+	// }
 
 }
 
