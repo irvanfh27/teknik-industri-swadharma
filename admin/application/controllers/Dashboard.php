@@ -148,7 +148,7 @@
             $this->load->view('admin/template_crud',(array)$output);
         }
 
-         public function alumni()
+        public function alumni()
         {
             $crud = new grocery_CRUD();
 
@@ -184,6 +184,27 @@
 
             $output = $crud->render();
             $data['title'] = "Message";
+
+
+            $this->load->view('frame/header_view');
+            $this->load->view('frame/sidebar_nav_view');
+            $this->load->view('frame/title_table', $data);
+            $this->load->view('admin/template_crud',(array)$output);
+        }
+
+        public function programkerja()
+        {
+            $crud = new grocery_CRUD();
+
+            $crud->set_table('program_kerja');
+            $crud->set_subject('Program Kerja');
+            $crud->set_field_upload('file','assets/uploads/files');
+            $crud->change_field_type('create_at', 'invisible');
+            $crud->unset_print();
+            $crud->unset_export();
+
+            $output = $crud->render();
+            $data['title'] = "Program Kerja";
 
 
             $this->load->view('frame/header_view');

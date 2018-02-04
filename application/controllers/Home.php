@@ -101,7 +101,7 @@ class Home extends CI_Controller {
 		if (empty($data['post'])) {
 			show_404();
 		}
-		$data['judul'] = $data['post']['judul'];
+		// $data['judul'] = $data['post']['judul'];
 		$data['title'] = 'Program Kerja';
 		
 		$this->load->view('view_detail_program_kerja', $data);

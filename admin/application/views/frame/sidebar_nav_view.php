@@ -25,6 +25,8 @@
                                 <li> <a href="<?php echo base_url('dashboard/gallery_kampus'); ?>">&raquo; Gallery Kampus</a> </li>
                                 <li> <a href="<?php echo base_url('dashboard/teknik_industri'); ?>">&raquo; Teknik Industri</a> </li>
                                 <li> <a href="<?php echo base_url('dashboard/alumni'); ?>">&raquo; Data Alumni</a> </li>
+                                <li> <a href="<?php echo base_url('dashboard/programkerja'); ?>">&raquo; Program Kerja</a> </li>
+
 
                             </ul>
                         </li>

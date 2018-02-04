@@ -3,12 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Mdata extends CI_Model {
 
-	public function __construct()
-	{
-		parent::__construct();
-		$this->load->database();
-	}
-
 	function get_gallery_kegiatan(){
 		$query = $this->db->query('SELECT * FROM gallery_kegiatan');
 		return $query;
@@ -65,13 +59,22 @@ class Mdata extends CI_Model {
 
 	public function get_program_kerja($id = FALSE)
 	{
+
 		if ($id === FALSE) {
 			$query = $this->db->get('program_kerja');
 			return $query->result_array();
 		}
-		$query = $this->db->where('program_kerja', array('id' => $id ));
+
+		$query = $this->db->get_where('program_kerja', array('id' => $id));
 
 		return $query->row_array();
+	}
+
+	public function get_detail_program_kerja($id)
+	{
+		$this->db->where('id',$id);
+		$query=$this->db->get('program_kerja');
+		return $query->result();
 	}
 
 }
